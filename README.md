@@ -7,4 +7,4 @@
 
 ###### create a branch
 
-- git checkout -b __branch__name
+- git checkout -b __branch name__
