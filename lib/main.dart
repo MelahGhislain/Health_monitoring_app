@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Text("BackSlash Flutter provides extraordinary flutter tutorials. Do Subscribe! ",
+                  Text("To Health Monitoring System ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.grey[700],
