@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:health_monitoring_app/pages/BloodPressure.dart';
 
 class DashBoard extends StatelessWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -8,6 +9,7 @@ class DashBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.apartment),
           onPressed: (){},
@@ -19,6 +21,7 @@ class DashBoard extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         child: Column(
+
           children: [
               Row(
                 children: [
@@ -46,17 +49,21 @@ class DashBoard extends StatelessWidget {
                   )
                 ],
               ),
+            SizedBox(height: 20,),
               customCard(
                 "Pulse",
                 "99.0",
                 "bpm",
                   (){}
               ),
+
               customCard(
                   "Blood Pre",
                   "125.0",
                   "bpm",
-                      (){}
+                      (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> BloodPressure()));
+                      }
               ),
               customCard(
                   "Temp",
