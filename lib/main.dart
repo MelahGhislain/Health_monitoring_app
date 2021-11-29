@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:health_monitoring_app/pages/Dashboard.dart';
 import 'package:health_monitoring_app/pages/LoginPage.dart';
 import 'package:health_monitoring_app/pages/SignupPage.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  // setting up the device orientation to portrait only
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
   runApp(MyApp());
 }
 
@@ -78,8 +85,8 @@ class HomePage extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
-
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> DashBoard()));
                     },
                     // defining the shape
                     shape: RoundedRectangleBorder(
@@ -103,7 +110,6 @@ class HomePage extends StatelessWidget {
                     height: 60,
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupPage()));
-
                     },
                     color: Color(0xff0095FF),
                     shape: RoundedRectangleBorder(
